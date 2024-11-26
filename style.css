@@ -41,6 +41,19 @@ header {
 	font-weight: 200;
 	font-size: 3rem;
 	letter-spacing: 0.5ch;
+	animation: slide-in 2.5s;
+}
+
+@keyframes slide-in {
+	0%{
+		transform: translateX(200%);
+	}
+	70%{
+		transform: translateX(-10%);
+	}
+	100%{
+		transform: translateX(0%);
+	}
 }
 
 .intro {
@@ -184,4 +197,38 @@ footer{
 
 @media (min-width: 1000px) {
 	/* here goes computer style */
+	@keyframes slide-in {
+		0%{
+			transform: translateX(500%);
+		}
+		70%{
+			transform: translateX(-10%);
+		}
+		100%{
+			transform: translateX(0%);
+		}
+	}
+	
+	.header-title{
+		font-size: 5rem;
+	}
+	
+	.me{
+		max-width: 300px;
+	}
+	
+	.intro-text{
+		font-size: 3rem;
+		padding-inline: 20%;
+	}
+	
+	#fun:hover{
+		font-size: 4rem;
+	}
+
+	.project-display{
+		grid-template-columns: 1fr 1fr 1fr;
+		padding-inline: 5%;
+	}
+
 }
